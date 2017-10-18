@@ -17,9 +17,7 @@ namespace EulerSharp
 		public Problem_17()
 		{
 			result = 0;
-			CountCharacters(342);
-			Console.WriteLine(result);
-			for (int i = 1; i <= 10; i++)
+			for (int i = 1; i <= 1000; i++)
 				CountCharacters(i);
 		}
 
@@ -34,25 +32,31 @@ namespace EulerSharp
 				case 2:
 					if (number >= 10 && number < 20)
 						result += dictTeen[number].Length;
+					
 					else
 					{
 						result += dictDcns[int.Parse(data[0].ToString())].Length;
-						result += dictDcns[int.Parse(data[1].ToString())].Length;
+						result += dictUnits[int.Parse(data[1].ToString())].Length;
 					}
 					break;
 				case 3:
 					int lastPair = int.Parse(data[1].ToString()+data[2].ToString());
-					if(lastPair == 0)
+					if (lastPair == 0)
 						result += (dictUnits[int.Parse(data[0].ToString())] + "hundred").Length;
 					else
+					{
 						result += (dictUnits[int.Parse(data[0].ToString())] + "hundredand").Length;
+					}
 					if (lastPair >= 10 && lastPair < 20)
-						result += dictTeen[number].Length;
+						result += dictTeen[lastPair].Length;
 					else
 					{
-						result += dictDcns[int.Parse(data[0].ToString())].Length;
 						result += dictDcns[int.Parse(data[1].ToString())].Length;
+						result += dictUnits[int.Parse(data[2].ToString())].Length;
 					}
+					break;
+				case 4:
+					result += "onethousand".Length;
 					break;
 					
 			}
@@ -62,7 +66,7 @@ namespace EulerSharp
 		{
 			//Units
 			{ 1,"one"},
-			{ 2,"who"},
+			{ 2,"two"},
 			{ 3,"three"},
 			{ 4,"four"},
 			{ 5,"five"},
@@ -78,7 +82,7 @@ namespace EulerSharp
 			//Tys
 			{ 2,"twenty"},
 			{ 3,"thirty"},
-			{ 4,"fourty"},
+			{ 4,"forty"},
 			{ 5,"fifty"},
 			{ 6,"sixty"},
 			{ 7,"seventy"},
@@ -99,7 +103,7 @@ namespace EulerSharp
 			{ 16,"sixteen"},
 			{ 17,"seventeen"},
 			{ 18,"eighteen"},
-			{ 19,"nineten"}
+			{ 19,"nineteen"}
 		};
 
 		public int Result { get { return result; } }
