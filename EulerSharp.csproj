@@ -43,10 +43,16 @@
     <Compile Include="Problems\Problem_7.cs" />
     <Compile Include="Problems\Problem_11.cs" />
     <Compile Include="Tools.cs" />
+    <Compile Include="Problems\Problem_8.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Problems\" />
     <Folder Include="Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Data\Problem_8.txt" />
+    <None Include="Data\Problem_11.txt" />
+    <None Include="Data\Problem_13.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
