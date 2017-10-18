@@ -6,7 +6,10 @@ namespace EulerSharp
 	{
 		public static void Main(string[] args)
 		{
-			Console.WriteLine(new Problem_9().Result);
+
+			Console.WriteLine(new Problem_12().Result);
+
 		}
+
 	}
 }
