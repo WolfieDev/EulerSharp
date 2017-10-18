@@ -53,7 +53,7 @@ namespace EulerSharp
 		}
 
 		/*
-		 * Checks the amount of divisors from a number
+		 * Checks the amount of divisors of a given number
 		 */
 		public static int NumberOfDivisors(long number)
 		{
@@ -74,6 +74,23 @@ namespace EulerSharp
 			}
 
 			return nod;
+		}
+
+		/*
+		 * Calculates amount of steps in the Collatz sequence of a given number 
+		 */
+		public static int Collatz(long number)
+		{
+			int amount = 1; //Starts at 1, first number counts as step
+			while (number != 1)
+			{
+				if (number % 2 == 0)
+					number = number / 2;
+				else
+					number = (3 * number) + 1;
+				amount++;
+			}
+			return amount;
 		}
 	}
 }

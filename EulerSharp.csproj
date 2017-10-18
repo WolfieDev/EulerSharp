@@ -30,6 +30,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
@@ -47,6 +48,9 @@
     <Compile Include="Problems\Problem_9.cs" />
     <Compile Include="Problems\Problem_10.cs" />
     <Compile Include="Problems\Problem_12.cs" />
+    <Compile Include="Problems\Problem_13.cs" />
+    <Compile Include="Problems\Problem_14.cs" />
+    <Compile Include="Problems\Problem_15.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Problems\" />
