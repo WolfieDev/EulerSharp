@@ -38,5 +38,14 @@ namespace EulerSharp
 			string path = Path.Combine(@"../../Data/" + file);
 			return File.ReadAllText(path);
 		}
+
+		public static bool PerfectSquare(int number)
+		{
+			double root = Math.Sqrt(number);
+			if (root % 1 == 0)
+				return true;
+			else 
+				return false;
+		}
 	}
 }
