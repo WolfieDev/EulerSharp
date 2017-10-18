@@ -51,6 +51,8 @@
     <Compile Include="Problems\Problem_13.cs" />
     <Compile Include="Problems\Problem_14.cs" />
     <Compile Include="Problems\Problem_15.cs" />
+    <Compile Include="Problems\Problem_16.cs" />
+    <Compile Include="Problems\Problem_17.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Problems\" />
